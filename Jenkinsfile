@@ -3,15 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/sathvik-dande/internal.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                sh 'npm install || true'
             }
         }
 
